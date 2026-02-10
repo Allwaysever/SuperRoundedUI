@@ -40,31 +40,31 @@
   --srui-info: #2196F3;
 
   /* ===== BORDER RADIUS (Minimal 15px sesuai SRUI 1.3.1) ===== */
-  --srui-radius-sm: 15px;
-  --srui-radius-md: 20px;
-  --srui-radius-lg: 25px;
-  --srui-radius-xl: 30px;
-  --srui-radius-pill: 9999px;
+  --srui-radius-sm: 15px;     /* Minimal 15px */
+  --srui-radius-md: 20px;     /* Medium */
+  --srui-radius-lg: 25px;     /* Large */
+  --srui-radius-xl: 30px;     /* Extra Large */
+  --srui-radius-pill: 9999px; /* Untuk Chip SRUI */
 
   /* ===== SPACING (Mobile First - rem based) ===== */
-  --srui-space-xs: 0.25rem;
-  --srui-space-sm: 0.5rem;
-  --srui-space-md: 1rem;
-  --srui-space-lg: 1.5rem;
-  --srui-space-xl: 2rem;
-  --srui-space-2xl: 3rem;
+  --srui-space-xs: 0.25rem;   /* 4px */
+  --srui-space-sm: 0.5rem;    /* 8px */
+  --srui-space-md: 1rem;      /* 16px */
+  --srui-space-lg: 1.5rem;    /* 24px */
+  --srui-space-xl: 2rem;      /* 32px */
+  --srui-space-2xl: 3rem;     /* 48px */
 
   /* ===== TYPOGRAPHY ===== */
   --srui-font-family: Arial, sans-serif;
   --srui-font-mono: monospace;
-  --srui-font-size-xs: 0.75rem;
-  --srui-font-size-sm: 0.875rem;
-  --srui-font-size-md: 1rem;
-  --srui-font-size-lg: 1.125rem;
-  --srui-font-size-xl: 1.25rem;
-  --srui-font-size-2xl: 1.5rem;
-  --srui-font-size-3xl: 2rem;
-  --srui-font-size-4xl: 2.5rem;
+  --srui-font-size-xs: 0.75rem;   /* 12px */
+  --srui-font-size-sm: 0.875rem;  /* 14px */
+  --srui-font-size-md: 1rem;      /* 16px */
+  --srui-font-size-lg: 1.125rem;  /* 18px */
+  --srui-font-size-xl: 1.25rem;   /* 20px */
+  --srui-font-size-2xl: 1.5rem;   /* 24px */
+  --srui-font-size-3xl: 2rem;     /* 32px */
+  --srui-font-size-4xl: 2.5rem;   /* 40px */
 
   /* ===== SHADOW (Minimalis) ===== */
   --srui-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -90,7 +90,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 16px; /* Base for rem units */
   scroll-behavior: smooth;
 }
 
@@ -129,6 +129,7 @@ p { margin-bottom: 1rem; }
 .small { font-size: var(--srui-font-size-sm); }
 
 /* 5. Color System Classes */
+/* Background Colors */
 .bg-primary { background-color: var(--srui-bg) !important; }
 .bg-card { background-color: var(--srui-card) !important; }
 .bg-accent { background-color: var(--srui-accent) !important; }
@@ -137,9 +138,11 @@ p { margin-bottom: 1rem; }
 .bg-error { background-color: var(--srui-error) !important; }
 .bg-info { background-color: var(--srui-info) !important; }
 
+/* Light Theme Backgrounds */
 .light-theme .bg-primary { background-color: var(--srui-bg-light) !important; }
 .light-theme .bg-card { background-color: var(--srui-card-light) !important; }
 
+/* Text Colors */
 .text-primary { color: var(--srui-text) !important; }
 .text-accent { color: var(--srui-accent) !important; }
 .text-accent-dark { color: var(--srui-accent-text) !important; }
@@ -150,10 +153,12 @@ p { margin-bottom: 1rem; }
 .text-neutral { color: var(--srui-neutral-mid) !important; }
 .text-muted { color: var(--srui-neutral-dark) !important; }
 
+/* Light Theme Text */
 .light-theme .text-primary { color: var(--srui-text-light) !important; }
 .light-theme .text-accent { color: var(--srui-accent-alt) !important; }
 .light-theme .text-muted { color: var(--srui-border-light) !important; }
 
+/* Border Colors */
 .border-primary { border-color: var(--srui-border) !important; }
 .border-accent { border-color: var(--srui-accent) !important; }
 .border-success { border-color: var(--srui-success) !important; }
@@ -164,14 +169,15 @@ p { margin-bottom: 1rem; }
 .light-theme .border-primary { border-color: var(--srui-border-light) !important; }
 
 /* 6. Border Radius System (Minimal 15px) */
-.rounded-sm { border-radius: var(--srui-radius-sm) !important; }
-.rounded-md { border-radius: var(--srui-radius-md) !important; }
-.rounded-lg { border-radius: var(--srui-radius-lg) !important; }
-.rounded-xl { border-radius: var(--srui-radius-xl) !important; }
-.rounded-pill { border-radius: var(--srui-radius-pill) !important; }
+.rounded-sm { border-radius: var(--srui-radius-sm) !important; } /* 15px minimal */
+.rounded-md { border-radius: var(--srui-radius-md) !important; } /* 20px */
+.rounded-lg { border-radius: var(--srui-radius-lg) !important; } /* 25px */
+.rounded-xl { border-radius: var(--srui-radius-xl) !important; } /* 30px */
+.rounded-pill { border-radius: var(--srui-radius-pill) !important; } /* 9999px */
 .rounded-full { border-radius: 50% !important; }
 
 /* 7. Spacing System */
+/* Margin */
 .m-0 { margin: 0 !important; }
 .m-xs { margin: var(--srui-space-xs) !important; }
 .m-sm { margin: var(--srui-space-sm) !important; }
@@ -180,6 +186,7 @@ p { margin-bottom: 1rem; }
 .m-xl { margin: var(--srui-space-xl) !important; }
 .m-2xl { margin: var(--srui-space-2xl) !important; }
 
+/* Margin Top */
 .mt-0 { margin-top: 0 !important; }
 .mt-xs { margin-top: var(--srui-space-xs) !important; }
 .mt-sm { margin-top: var(--srui-space-sm) !important; }
@@ -188,6 +195,7 @@ p { margin-bottom: 1rem; }
 .mt-xl { margin-top: var(--srui-space-xl) !important; }
 .mt-2xl { margin-top: var(--srui-space-2xl) !important; }
 
+/* Margin Bottom */
 .mb-0 { margin-bottom: 0 !important; }
 .mb-xs { margin-bottom: var(--srui-space-xs) !important; }
 .mb-sm { margin-bottom: var(--srui-space-sm) !important; }
@@ -196,12 +204,14 @@ p { margin-bottom: 1rem; }
 .mb-xl { margin-bottom: var(--srui-space-xl) !important; }
 .mb-2xl { margin-bottom: var(--srui-space-2xl) !important; }
 
+/* Margin Left/Right */
 .mx-auto { margin-left: auto !important; margin-right: auto !important; }
 .mx-0 { margin-left: 0 !important; margin-right: 0 !important; }
 .mx-xs { margin-left: var(--srui-space-xs) !important; margin-right: var(--srui-space-xs) !important; }
 .mx-sm { margin-left: var(--srui-space-sm) !important; margin-right: var(--srui-space-sm) !important; }
 .mx-md { margin-left: var(--srui-space-md) !important; margin-right: var(--srui-space-md) !important; }
 
+/* Padding */
 .p-0 { padding: 0 !important; }
 .p-xs { padding: var(--srui-space-xs) !important; }
 .p-sm { padding: var(--srui-space-sm) !important; }
@@ -210,6 +220,7 @@ p { margin-bottom: 1rem; }
 .p-xl { padding: var(--srui-space-xl) !important; }
 .p-2xl { padding: var(--srui-space-2xl) !important; }
 
+/* Padding Top */
 .pt-0 { padding-top: 0 !important; }
 .pt-xs { padding-top: var(--srui-space-xs) !important; }
 .pt-sm { padding-top: var(--srui-space-sm) !important; }
@@ -218,6 +229,7 @@ p { margin-bottom: 1rem; }
 .pt-xl { padding-top: var(--srui-space-xl) !important; }
 .pt-2xl { padding-top: var(--srui-space-2xl) !important; }
 
+/* Padding Bottom */
 .pb-0 { padding-bottom: 0 !important; }
 .pb-xs { padding-bottom: var(--srui-space-xs) !important; }
 .pb-sm { padding-bottom: var(--srui-space-sm) !important; }
@@ -234,6 +246,7 @@ p { margin-bottom: 1rem; }
 .d-flex { display: flex !important; }
 .d-grid { display: grid !important; }
 
+/* Flexbox */
 .flex-column { flex-direction: column !important; }
 .flex-row { flex-direction: row !important; }
 .flex-wrap { flex-wrap: wrap !important; }
@@ -243,6 +256,7 @@ p { margin-bottom: 1rem; }
 .flex-initial { flex: 0 1 auto !important; }
 .flex-none { flex: none !important; }
 
+/* Alignment */
 .align-items-start { align-items: flex-start !important; }
 .align-items-end { align-items: flex-end !important; }
 .align-items-center { align-items: center !important; }
@@ -256,6 +270,7 @@ p { margin-bottom: 1rem; }
 .justify-content-around { justify-content: space-around !important; }
 .justify-content-evenly { justify-content: space-evenly !important; }
 
+/* Gap */
 .gap-0 { gap: 0 !important; }
 .gap-xs { gap: var(--srui-space-xs) !important; }
 .gap-sm { gap: var(--srui-space-sm) !important; }
@@ -263,6 +278,7 @@ p { margin-bottom: 1rem; }
 .gap-lg { gap: var(--srui-space-lg) !important; }
 .gap-xl { gap: var(--srui-space-xl) !important; }
 
+/* Grid */
 .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
 .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
 .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
@@ -277,6 +293,7 @@ p { margin-bottom: 1rem; }
 .shadow-lg { box-shadow: var(--srui-shadow-lg) !important; }
 
 /* 10. Special Effects */
+/* GlassLayer Effect */
 .glasslayer {
   background: rgba(27, 28, 30, 0.9) !important;
   backdrop-filter: blur(8px) !important;
@@ -291,6 +308,7 @@ p { margin-bottom: 1rem; }
   border: 1px solid rgba(0, 0, 0, 0.1) !important;
 }
 
+/* Micro-Bounce Effect */
 .micro-bounce {
   transition: transform 0.1s ease-out !important;
 }
@@ -304,12 +322,14 @@ p { margin-bottom: 1rem; }
 }
 
 /* 11. Component System */
+
+/* === BUTTON COMPONENT === */
 .srui-btn {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   padding: var(--srui-space-sm) var(--srui-space-lg) !important;
-  border-radius: var(--srui-radius-md) !important;
+  border-radius: var(--srui-radius-md) !important; /* 20px */
   font-family: var(--srui-font-family) !important;
   font-size: var(--srui-font-size-md) !important;
   font-weight: 600 !important;
@@ -318,11 +338,12 @@ p { margin-bottom: 1rem; }
   transition: all 0.3s ease-in-out !important;
   text-decoration: none !important;
   gap: var(--srui-space-sm) !important;
-  min-height: 44px !important;
+  min-height: 44px !important; /* Touch target size */
   position: relative !important;
   overflow: hidden !important;
 }
 
+/* Button Variants */
 .btn-primary {
   background-color: var(--srui-accent) !important;
   color: var(--srui-accent-text) !important;
@@ -399,6 +420,7 @@ p { margin-bottom: 1rem; }
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
+/* Light Theme Button Adjustments */
 .light-theme .btn-secondary {
   border-color: var(--srui-accent-alt) !important;
   color: var(--srui-accent-alt) !important;
@@ -417,18 +439,19 @@ p { margin-bottom: 1rem; }
   background-color: rgba(0, 0, 0, 0.05) !important;
 }
 
+/* Button Sizes */
 .btn-sm {
   padding: var(--srui-space-xs) var(--srui-space-md) !important;
   font-size: var(--srui-font-size-sm) !important;
   min-height: 36px !important;
-  border-radius: var(--srui-radius-sm) !important;
+  border-radius: var(--srui-radius-sm) !important; /* 15px */
 }
 
 .btn-lg {
   padding: var(--srui-space-md) var(--srui-space-xl) !important;
   font-size: var(--srui-font-size-lg) !important;
   min-height: 52px !important;
-  border-radius: var(--srui-radius-lg) !important;
+  border-radius: var(--srui-radius-lg) !important; /* 25px */
 }
 
 .btn-block {
@@ -436,12 +459,14 @@ p { margin-bottom: 1rem; }
   width: 100% !important;
 }
 
+/* Button States */
 .srui-btn:disabled {
   opacity: 0.5 !important;
   cursor: not-allowed !important;
   pointer-events: none !important;
 }
 
+/* Button with loading state */
 .btn-loading {
   position: relative !important;
   color: transparent !important;
@@ -463,9 +488,10 @@ p { margin-bottom: 1rem; }
   to { transform: rotate(360deg); }
 }
 
+/* === CARD COMPONENT === */
 .srui-card {
   background-color: var(--srui-card) !important;
-  border-radius: var(--srui-radius-lg) !important;
+  border-radius: var(--srui-radius-lg) !important; /* 25px */
   padding: var(--srui-space-lg) !important;
   box-shadow: var(--srui-shadow-md) !important;
   transition: all 0.3s ease-in-out !important;
@@ -477,6 +503,7 @@ p { margin-bottom: 1rem; }
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
 }
 
+/* Card Variations */
 .card-interactive {
   cursor: pointer !important;
 }
@@ -503,16 +530,18 @@ p { margin-bottom: 1rem; }
   border-color: var(--srui-border-light) !important;
 }
 
+/* Card Sizes */
 .card-sm {
   padding: var(--srui-space-md) !important;
-  border-radius: var(--srui-radius-md) !important;
+  border-radius: var(--srui-radius-md) !important; /* 20px */
 }
 
 .card-lg {
   padding: var(--srui-space-xl) !important;
-  border-radius: var(--srui-radius-xl) !important;
+  border-radius: var(--srui-radius-xl) !important; /* 30px */
 }
 
+/* Card with image */
 .card-img-top {
   width: 100% !important;
   height: auto !important;
@@ -520,12 +549,13 @@ p { margin-bottom: 1rem; }
   margin-bottom: var(--srui-space-md) !important;
 }
 
+/* === SRUI CHIP COMPONENT === */
 .srui-chip {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   padding: var(--srui-space-xs) var(--srui-space-md) !important;
-  border-radius: var(--srui-radius-pill) !important;
+  border-radius: var(--srui-radius-pill) !important; /* 9999px */
   font-size: var(--srui-font-size-sm) !important;
   font-weight: 600 !important;
   gap: var(--srui-space-xs) !important;
@@ -533,6 +563,7 @@ p { margin-bottom: 1rem; }
   white-space: nowrap !important;
 }
 
+/* Chip Variants */
 .chip-default {
   background-color: var(--srui-neutral-mid) !important;
   color: var(--srui-text) !important;
@@ -574,6 +605,7 @@ p { margin-bottom: 1rem; }
   color: var(--srui-text-light) !important;
 }
 
+/* Interactive Chip */
 .chip-interactive {
   cursor: pointer !important;
 }
@@ -583,6 +615,7 @@ p { margin-bottom: 1rem; }
   transform: scale(1.05) !important;
 }
 
+/* Chip Sizes */
 .chip-sm {
   padding: 0.125rem var(--srui-space-sm) !important;
   font-size: var(--srui-font-size-xs) !important;
@@ -593,10 +626,11 @@ p { margin-bottom: 1rem; }
   font-size: var(--srui-font-size-md) !important;
 }
 
+/* === INPUT COMPONENT === */
 .srui-input {
   width: 100% !important;
   padding: var(--srui-space-sm) var(--srui-space-md) !important;
-  border-radius: var(--srui-radius-md) !important;
+  border-radius: var(--srui-radius-md) !important; /* 20px */
   border: 2px solid var(--srui-border) !important;
   background-color: var(--srui-card) !important;
   color: var(--srui-text) !important;
@@ -622,18 +656,20 @@ p { margin-bottom: 1rem; }
   box-shadow: 0 0 0 3px rgba(68, 68, 68, 0.2) !important;
 }
 
+/* Input Sizes */
 .input-sm {
   padding: var(--srui-space-xs) var(--srui-space-sm) !important;
   font-size: var(--srui-font-size-sm) !important;
-  border-radius: var(--srui-radius-sm) !important;
+  border-radius: var(--srui-radius-sm) !important; /* 15px */
 }
 
 .input-lg {
   padding: var(--srui-space-md) var(--srui-space-lg) !important;
   font-size: var(--srui-font-size-lg) !important;
-  border-radius: var(--srui-radius-lg) !important;
+  border-radius: var(--srui-radius-lg) !important; /* 25px */
 }
 
+/* Input States */
 .srui-input:disabled {
   opacity: 0.5 !important;
   cursor: not-allowed !important;
@@ -647,6 +683,7 @@ p { margin-bottom: 1rem; }
   border-color: var(--srui-success) !important;
 }
 
+/* Input with icon */
 .input-with-icon {
   position: relative !important;
 }
@@ -663,9 +700,10 @@ p { margin-bottom: 1rem; }
   padding-left: calc(var(--srui-space-md) * 2 + 16px) !important;
 }
 
+/* === ALERT COMPONENT === */
 .srui-alert {
   padding: var(--srui-space-md) var(--srui-space-lg) !important;
-  border-radius: var(--srui-radius-md) !important;
+  border-radius: var(--srui-radius-md) !important; /* 20px */
   margin-bottom: var(--srui-space-md) !important;
   display: flex !important;
   align-items: flex-start !important;
@@ -696,12 +734,13 @@ p { margin-bottom: 1rem; }
   color: var(--srui-info) !important;
 }
 
+/* === BADGE COMPONENT === */
 .srui-badge {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   padding: 0.25rem 0.5rem !important;
-  border-radius: var(--srui-radius-pill) !important;
+  border-radius: var(--srui-radius-pill) !important; /* 9999px */
   font-size: var(--srui-font-size-xs) !important;
   font-weight: 600 !important;
   line-height: 1 !important;
@@ -733,32 +772,39 @@ p { margin-bottom: 1rem; }
 }
 
 /* 12. Utility Classes */
+
+/* Text Alignment */
 .text-left { text-align: left !important; }
 .text-center { text-align: center !important; }
 .text-right { text-align: right !important; }
 .text-justify { text-align: justify !important; }
 
+/* Font Weight */
 .font-light { font-weight: 300 !important; }
 .font-normal { font-weight: 400 !important; }
 .font-medium { font-weight: 500 !important; }
 .font-semibold { font-weight: 600 !important; }
 .font-bold { font-weight: 700 !important; }
 
+/* Text Transform */
 .text-uppercase { text-transform: uppercase !important; }
 .text-lowercase { text-transform: lowercase !important; }
 .text-capitalize { text-transform: capitalize !important; }
 
+/* Position */
 .position-static { position: static !important; }
 .position-relative { position: relative !important; }
 .position-absolute { position: absolute !important; }
 .position-fixed { position: fixed !important; }
 .position-sticky { position: sticky !important; }
 
+/* Overflow */
 .overflow-auto { overflow: auto !important; }
 .overflow-hidden { overflow: hidden !important; }
 .overflow-visible { overflow: visible !important; }
 .overflow-scroll { overflow: scroll !important; }
 
+/* Width & Height */
 .w-25 { width: 25% !important; }
 .w-50 { width: 50% !important; }
 .w-75 { width: 75% !important; }
@@ -771,17 +817,20 @@ p { margin-bottom: 1rem; }
 .h-100 { height: 100% !important; }
 .h-auto { height: auto !important; }
 
+/* Opacity */
 .opacity-0 { opacity: 0 !important; }
 .opacity-25 { opacity: 0.25 !important; }
 .opacity-50 { opacity: 0.5 !important; }
 .opacity-75 { opacity: 0.75 !important; }
 .opacity-100 { opacity: 1 !important; }
 
+/* Cursor */
 .cursor-pointer { cursor: pointer !important; }
 .cursor-default { cursor: default !important; }
 .cursor-not-allowed { cursor: not-allowed !important; }
 
 /* 13. Responsive Utilities */
+/* Mobile First Approach */
 @media (min-width: 640px) {
   .sm\:d-block { display: block !important; }
   .sm\:d-flex { display: flex !important; }
@@ -863,6 +912,7 @@ p { margin-bottom: 1rem; }
   }
 }
 
+/* Focus styles for accessibility */
 .srui-btn:focus-visible,
 .srui-input:focus-visible,
 .srui-chip:focus-visible {
@@ -870,6 +920,7 @@ p { margin-bottom: 1rem; }
   outline-offset: 2px !important;
 }
 
+/* High contrast mode support */
 @media (prefers-contrast: high) {
   .srui-btn {
     border: 2px solid currentColor !important;

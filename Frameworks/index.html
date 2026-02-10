@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="id" class="dark-theme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRUI Framework v1.3.1 - Demo</title>
+    <link rel="stylesheet" href="srui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Demo Styles */
+        .demo-section {
+            padding: var(--srui-space-xl) 0;
+            border-bottom: 1px solid var(--srui-border);
+        }
+        
+        .light-theme .demo-section {
+            border-bottom-color: var(--srui-border-light);
+        }
+        
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--srui-space-lg);
+            margin-top: var(--srui-space-lg);
+        }
+        
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--srui-space-lg);
+        }
+        
+        .color-swatch {
+            width: 100px;
+            height: 100px;
+            border-radius: var(--srui-radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--srui-space-sm);
+        }
+        
+        .theme-toggle {
+            position: fixed;
+            top: var(--srui-space-lg);
+            right: var(--srui-space-lg);
+            z-index: var(--srui-z-fixed);
+        }
+        
+        .hero {
+            padding: var(--srui-space-2xl) 0;
+            text-align: center;
+            background: linear-gradient(135deg, var(--srui-card) 0%, var(--srui-bg) 100%);
+        }
+        
+        .light-theme .hero {
+            background: linear-gradient(135deg, var(--srui-card-light) 0%, var(--srui-bg-light) 100%);
+        }
+        
+        .code-block {
+            background-color: var(--srui-card);
+            padding: var(--srui-space-md);
+            border-radius: var(--srui-radius-md);
+            font-family: monospace;
+            overflow-x: auto;
+            margin: var(--srui-space-md) 0;
+        }
+        
+        .light-theme .code-block {
+            background-color: var(--srui-card-light);
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button id="themeToggle" class="srui-btn btn-primary micro-bounce">
+            <i class="fas fa-moon"></i> Tema Gelap
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="demo-container">
+            <h1 class="h1 mb-sm">SuperRoundedUI</h1>
+            <p class="lead text-neutral mb-lg">"Flat never felt this round."</p>
+            <p class="text-lg mb-xl">Framework CSS eksklusif untuk proyek Allwaysever</p>
+            <div class="d-flex justify-content-center gap-md flex-wrap">
+                <button class="srui-btn btn-primary btn-lg micro-bounce">
+                    <i class="fas fa-download"></i> Mulai Sekarang
+                </button>
+                <button class="srui-btn btn-outline btn-lg micro-bounce">
+                    <i class="fas fa-book"></i> Dokumentasi
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <main class="demo-container">
+        <!-- Color System -->
+        <section class="demo-section">
+            <h2 class="h2 mb-md">Sistem Warna</h2>
+            <p class="text-neutral mb-lg">Palet warna SRUI yang konsisten untuk tema gelap dan terang</p>
+            
+            <div class="demo-grid">
+                <div class="srui-card">
+                    <div class="color-swatch bg-accent">
+                        <span class="text-accent-dark font-bold">Accent</span>
+                    </div>
+                    <h3 class="h4 mb-sm">SRUI Accent</h3>
+                    <p class="text-sm text-neutral">#ffce00 - Warna utama untuk CTA</p>
+                </div>
+                
+                <div class="srui-card">
+                    <div class="color-swatch bg-success">
+                        <span class="text-primary font-bold">Success</span>
+                    </div>
+                    <h3 class="h4 mb-sm">Success</h3>
+                    <p class="text-sm text-neutral">#4CAF50 - Indikator berhasil</p>
+                </div>
+                
+                <div class="srui-card">
+                    <div class="color-swatch bg-error">
+                        <span class="text-primary font-bold">Error</span>
+                    </div>
+                    <h3 class="h4 mb-sm">Error</h3>
+                    <p class="text-sm text-neutral">#F44336 - Validasi error</p>
+                </div>
+                
+                <div class="srui-card">
+                    <div class="color-swatch bg-info">
+                        <span class="text-primary font-bold">Info</span>
+                    </div>
+                    <h3 class="h4 mb-sm">Info</h3>
+                    <p class="text-sm text-neutral">#2196F3 - Informasi umum</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Button System -->
+        <section class="demo-section">
+            <h2 class="h2 mb-md">Sistem Tombol</h2>
+            <p class="text-neutral mb-lg">Tombol dengan border-radius minimal 15px dan efek Micro-Bounce</p>
+            
+            <div class="mb-lg">
+                <h3 class="h4 mb-sm">Varian Tombol</h3>
+                <div class="d-flex flex-wrap gap-md align-items-center mb-md">
+                    <button class="srui-btn btn-primary micro-bounce">Primary</button>
+                    <button class="srui-btn btn-secondary micro-bounce">Secondary</button>
+                    <button class="srui-btn btn-outline micro-bounce">Outline</button>
+                    <button class="srui-btn btn-success micro-bounce">Success</button>
+                    <button class="srui-btn btn-warning micro-bounce">Warning</button>
+                    <button class="srui-btn btn-error micro-bounce">Error</button>
+                    <button class="srui-btn btn-info micro-bounce">Info</button>
+                    <button class="srui-btn btn-ghost micro-bounce">Ghost</button>
+                </div>
+                
+                <div class="code-block">
+                    &lt;button class="srui-btn btn-primary micro-bounce"&gt;Primary&lt;/button&gt;
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="h4 mb-sm">Ukuran Tombol</h3>
+                <div class="d-flex flex-wrap gap-md align-items-center">
+                    <button class="srui-btn btn-primary btn-sm micro-bounce">Small</button>
+                    <button class="srui-btn btn-primary micro-bounce">Medium</button>
+                    <button class="srui-btn btn-primary btn-lg micro-bounce">Large</button>
+                    <button class="srui-btn btn-primary btn-block micro-bounce">Block</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card System -->
+        <section class="demo-section">
+            <h2 class="h2 mb-md">Sistem Kartu</h2>
+            <p class="text-neutral mb-lg">Kartu dengan border-radius 25px dan efek hover yang halus</p>
+            
+            <div class="demo-grid">
+                <div class="srui-card">
+                    <h3 class="h4 mb-sm">Kartu Standar</h3>
+                    <p class="mb-md">Kartu dengan semua sudut membulat sesuai filosofi SRUI.</p>
+                    <button class="srui-btn btn-primary btn-sm micro-bounce">Aksi</button>
+                </div>
+                
+                <div class="srui-card card-interactive micro-bounce">
+                    <h3 class="h4 mb-sm">Kartu Interaktif</h3>
+                    <p class="mb-md">Kartu ini memiliki efek hover dan dapat diklik.</p>
+                    <div class="d-flex gap-sm">
+                        <span class="srui-chip chip-success">Success</span>
+                        <span class="srui-chip chip-info">Info</span>
+                    </div>
+                </div>
+                
+                <div class="srui-card glasslayer">
+                    <h3 class="h4 mb-sm">GlassLayer Effect</h3>
+                    <p class="mb-md">Kartu dengan efek transparansi dan blur minimalis.</p>
+                    <span class="srui-badge badge-primary">New</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chip System -->
+        <section class="demo-section">
+            <h2 class="h2 mb-md">SRUI Chip</h2>
+            <p class="text-neutral mb-lg">Komponen kecil dengan border-radius pill-shaped (9999px)</p>
+            
+            <div class="d-flex flex-wrap gap-md align-items-center mb-lg">
+                <span class="srui-chip chip-default">
+                    <i class="fas fa-tag"></i> Default
+                </span>
+                <span class="srui-chip chip-success">
+                    <i class="fas fa-check-circle"></i> Success
+                </span>
+                <span class="srui-chip chip-warning">
+                    <i class="fas fa-exclamation-circle"></i> Warning
+                </span>
+                <span class="srui-chip chip-error">
+                    <i class="fas fa-times-circle"></i> Error
+                </span>
+                <span class="srui-chip chip-info">
+                    <i class="fas fa-info-circle"></i> Info
+                </span>
+                <span class="srui-chip chip-accent chip-interactive">
+                    <i class="fas fa-filter"></i> Filter
+                </span>
+                <span class="srui-chip chip-outline">
+                    <i class="fas fa-tag"></i> Outline
+                </span>
+            </div>
+            
+            <div class="code-block">
+                &lt;span class="srui-chip chip-success"&gt;
+                &nbsp;&nbsp;&lt;i class="fas fa-check-circle"&gt;&lt;/i&gt; Success
+                &lt;/span&gt;
+            </div>
+        </section>
+
+        <!-- Form Elements -->
+        <section class="demo-section">
+            <h2 class="h2 mb-md">Form Elements</h2>
+            <p class="text-neutral mb-lg">Input dengan border-radius minimal 15px</p>
+            
+            <div class="demo-grid">
+                <div class="srui-card">
+                    <h3 class="h4 mb-md">Input Standar</h3>
+                    <div class="mb-md">
+                        <label class="d-block mb-sm">Nama Lengkap</label>
+                        <input type="text" class="srui-input" placeholder="Masukkan nama Anda">
+                    </div>
+                    
+                    <div class="mb-md">
+                        <label class="d-block mb-sm">Email</label>
+                        <input type="email" class="srui-input error" placeholder="email@contoh.com">
+                        <small class="text-error mt-xs d-block">Email tidak valid</small>
+                    </div>
+                    
+                    <div>
+                        <label class="d-block mb-sm">Password</label>
+                        <input type="password" class="srui-input success" placeholder="Password">
+                        <small class="text-success mt-xs d-block">Password valid</small>
+                    </div>
+                </div>
+                
+                <div class="srui-card">
+                    <h3 class="h4 mb-md">Input dengan Icon</h3>
+                    <div class="mb-md">
+                        <label class="d-block mb-sm">Search</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-search input-icon"></i>
+                            <input type="text" class="srui-input" placeholder="Cari...">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-md">
+                        <label class="d-block mb-sm">Ukuran Input</label>
+                        <div class="d-flex flex-column gap-sm">
+                            <input type="text" class="srui-input input-sm" placeholder="Small">
+                            <input type="text" class="srui-input" placeholder="Medium">
+                            <input type="text" class="srui-input input-lg" placeholder="Large">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alert System -->
+        <section class="demo-section">
+            <h2 class="h2 mb-md">Sistem Alert</h2>
+            <p class="text-neutral mb-lg">Notifikasi dengan border-radius 20px</p>
+            
+            <div class="demo-grid">
+                <div class="srui-alert alert-success">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Berhasil!</strong> Data telah disimpan.
+                    </div>
+                </div>
+                
+                <div class="srui-alert alert-warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div>
+                        <strong>Peringatan!</strong> Data hampir penuh.
+                    </div>
+                </div>
+                
+                <div class="srui-alert alert-error">
+                    <i class="fas fa-times-circle"></i>
+                    <div>
+                        <strong>Error!</strong> Gagal menyimpan data.
+                    </div>
+                </div>
+                
+                <div class="srui-alert alert-info">
+                    <i class="fas fa-info-circle"></i>
+                    <div>
+                        <strong>Info:</strong> Sistem akan di-maintenance.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Utility Classes -->
+        <section class="demo-section">
+            <h2 class="h2 mb-md">Kelas Utility</h2>
+            <p class="text-neutral mb-lg">Kelas utilitas untuk spacing, display, dan layout</p>
+            
+            <div class="srui-card">
+                <h3 class="h4 mb-md">Spacing Utilities</h3>
+                <div class="d-flex flex-wrap gap-md mb-md">
+                    <div class="p-xs bg-accent rounded-sm">.p-xs</div>
+                    <div class="p-sm bg-accent rounded-sm">.p-sm</div>
+                    <div class="p-md bg-accent rounded-sm">.p-md</div>
+                    <div class="p-lg bg-accent rounded-sm">.p-lg</div>
+                    <div class="p-xl bg-accent rounded-sm">.p-xl</div>
+                </div>
+                
+                <h3 class="h4 mb-md">Border Radius</h3>
+                <div class="d-flex flex-wrap gap-md">
+                    <div class="p-md bg-success rounded-sm">.rounded-sm (15px)</div>
+                    <div class="p-md bg-warning rounded-md">.rounded-md (20px)</div>
+                    <div class="p-md bg-error rounded-lg">.rounded-lg (25px)</div>
+                    <div class="p-md bg-info rounded-xl">.rounded-xl (30px)</div>
+                    <div class="p-md bg-accent rounded-pill">.rounded-pill</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="srui-card m-xl">
+        <div class="text-center">
+            <h3 class="h4 mb-sm">SuperRoundedUI Framework</h3>
+            <p class="text-neutral mb-md">Versi 1.3.1 - © 2025 Allwaysever Project</p>
+            <p class="text-sm text-muted">"Flat never felt this round."</p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        themeToggle.addEventListener('click', () => {
+            if (body.classList.contains('dark-theme')) {
+                body.classList.remove('dark-theme');
+                body.classList.add('light-theme');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i> Tema Terang';
+            } else {
+                body.classList.remove('light-theme');
+                body.classList.add('dark-theme');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i> Tema Gelap';
+            }
+        });
+        
+        // Demo interactive elements
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add click effects to interactive cards
+            const interactiveCards = document.querySelectorAll('.card-interactive');
+            interactiveCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.classList.add('micro-bounce');
+                    setTimeout(() => {
+                        this.classList.remove('micro-bounce');
+                    }, 150);
+                });
+            });
+            
+            // Add hover effects to chips
+            const interactiveChips = document.querySelectorAll('.chip-interactive');
+            interactiveChips.forEach(chip => {
+                chip.addEventListener('click', function() {
+                    this.classList.add('micro-bounce');
+                    setTimeout(() => {
+                        this.classList.remove('micro-bounce');
+                    }, 150);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
