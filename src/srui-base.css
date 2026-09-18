@@ -1,0 +1,85 @@
+/* ==========================================================================
+   SRUI Base — Reset, Typography Foundation, and Global States
+   ========================================================================== */
+
+/* ===== Font Faces (Outfit via CDN) ===== */
+@font-face {
+  font-family: 'Outfit';
+  src: url('__CDN_BASE__/fonts/Outfit-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('__CDN_BASE__/fonts/Outfit-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('__CDN_BASE__/fonts/Outfit-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===== Box Model Reset ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ===== Document ===== */
+html {
+  font-size: 100%; /* 16px dasar, gunakan rem */
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--srui-background);
+  color: var(--srui-text);
+  font-family: var(--srui-font-primary);
+  line-height: 1.5;
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Media ===== */
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* ===== Focus ===== */
+:focus-visible {
+  outline: 2px solid var(--srui-accent);
+  outline-offset: 2px;
+  transition: outline-offset 0.1s ease-out;
+}
+
+/* ===== Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

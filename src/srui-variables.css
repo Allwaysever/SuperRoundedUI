@@ -1,0 +1,66 @@
+/* ==========================================================================
+   SRUI Variables — Design Tokens
+   Semua nilai SRUI disimpan sebagai custom properties di :root.
+   ========================================================================== */
+
+:root {
+  /* ===== WARNA UTAMA ===== */
+  --srui-accent: #ffce00;
+  --srui-background: #1B1C1E;
+  --srui-card: #0f0f0f;
+  --srui-text: #ffffff;
+  --srui-accent-text: #000000;
+
+  /* ===== WARNA NETRAL ===== */
+  --srui-border: #4B4F50;
+  --srui-text-secondary: #999999;
+  --srui-text-tertiary: #666666;
+
+  /* ===== WARNA SEMANTIK ===== */
+  --srui-success: #4CAF50;
+  --srui-warning: #ffce00; /* sama dengan accent */
+  --srui-error: #F44336;
+  --srui-info: #2196F3;
+
+  /* ===== TIPOGRAFI ===== */
+  --srui-font-primary: 'Outfit', 'Arial', sans-serif;
+  --srui-font-mono: 'Courier New', monospace;
+  --srui-font-weight-regular: 400;
+  --srui-font-weight-medium: 500;
+  --srui-font-weight-bold: 700;
+
+  /* ===== RADIUS ===== */
+  --srui-radius-sm: 12px;
+  --srui-radius-md: 15px; /* radius standar */
+  --srui-radius-lg: 25px;
+  --srui-radius-pill: 9999px;
+
+  /* ===== SPACING (skala 4px) ===== */
+  --srui-space-1: 0.25rem;  /* 4px */
+  --srui-space-2: 0.5rem;   /* 8px */
+  --srui-space-3: 0.75rem;  /* 12px */
+  --srui-space-4: 1rem;     /* 16px */
+  --srui-space-6: 1.5rem;   /* 24px */
+  --srui-space-8: 2rem;     /* 32px */
+  --srui-space-12: 3rem;    /* 48px */
+
+  /* ===== SHADOW ===== */
+  --srui-shadow-card: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --srui-shadow-raised: 0 4px 12px rgba(0, 0, 0, 0.5);
+
+  /* ===== MOTION ===== */
+  --srui-duration-fast: 0.1s;
+  --srui-duration-normal: 0.3s;
+  --srui-easing-press: ease-out;
+  --srui-easing-smooth: ease-in-out;
+
+  /* ===== Z-INDEX LAYER ===== */
+  --srui-z-dropdown: 100;
+  --srui-z-sticky: 200;
+  --srui-z-modal: 300;
+  --srui-z-toast: 400;
+
+  /* ===== INTERAKSI SCALE ===== */
+  --srui-hover-scale: 0.96;
+  --srui-active-scale: 0.92;
+}

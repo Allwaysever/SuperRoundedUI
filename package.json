@@ -1,0 +1,19 @@
+{
+  "name": "superroundedui",
+  "version": "3.0.0",
+  "description": "SuperRoundedUI (SRUI) — Pure-CSS dark design system. Flat never felt this round.",
+  "private": true,
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Allwaysever Projects",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Allwaysever/SuperRoundedUI.git"
+  },
+  "scripts": {
+    "build": "node build.js",
+    "watch": "node build.js --watch"
+  },
+  "devDependencies": {
+    "lightningcss": "^1.24.0"
+  }
+}
