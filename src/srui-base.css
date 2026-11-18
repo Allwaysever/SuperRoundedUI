@@ -27,6 +27,15 @@
   font-display: swap;
 }
 
+/* ===== Font Faces (Material Symbols Rounded via CDN Sendiri) ===== */
+@font-face {
+  font-family: 'Material Symbols Rounded';
+  font-style: normal;
+  font-weight: 400; /* Variable font, satu file untuk semua weight */
+  font-display: swap;
+  src: url('__CDN_BASE__/fonts/MaterialSymbolsRounded.woff2') format('woff2');
+}
+
 /* ===== Box Model Reset ===== */
 *,
 *::before,
