@@ -12,7 +12,7 @@ SuperRoundedUI is a pure-CSS design system created by Allwaysever that combines 
 - **Super rounded corners** — Consistent border-radius from 12px to 25px
 - **GlassLayer effects** — Soft transparency with backdrop blur
 - **Micro-bounce interactions** — Scale-based press & hover effects
-- **Iconography ready** — Material Symbols Rounded + Font Awesome Brands
+- **Iconography ready** — Self-hosted Material Symbols Rounded (WOFF2) + Font Awesome Brands
 - **Accessibility first** — AAA contrast ratio compliance
 - **Fully customizable** — Via CSS custom properties
 
@@ -23,16 +23,10 @@ SuperRoundedUI is a pure-CSS design system created by Allwaysever that combines 
 #### CDN (Recommended)
 
 ```html
-<!-- SRUI Bundle -->
+<!-- SRUI Bundle (Includes Outfit & Material Symbols Rounded) -->
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.0.0/dist/srui.min.css"
-/>
-
-<!-- Icons: Material Symbols Rounded (required) -->
-<link
-  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.1.0/dist/srui.min.css"
 />
 
 <!-- Brand Logos: Font Awesome Brands (optional) -->
@@ -42,7 +36,7 @@ SuperRoundedUI is a pure-CSS design system created by Allwaysever that combines 
 />
 ```
 
-> ⚠️ **Production:** Selalu pin ke versi exact (`@3.0.0`). Jangan pakai `@latest` di produksi.
+> ⚠️ **Production:** Selalu pin ke versi exact (`@3.1.0`). Jangan pakai `@latest` di produksi.
 
 #### Basic Usage
 
@@ -66,11 +60,11 @@ SRUI di-distribute sebagai **single bundle** via jsDelivr.
 
 | Environment | URL |
 | --- | --- |
-| **Production** (pinned) | `https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.0.0/dist/srui.min.css` |
+| **Production** (pinned) | `https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.1.0/dist/srui.min.css` |
 | **Development** (latest) | `https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@latest/dist/srui.min.css` |
-| **Debug** (unminified) | `https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.0.0/dist/srui.css` |
+| **Debug** (unminified) | `https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.1.0/dist/srui.css` |
 
-Font Outfit otomatis di-load dari bundle. Tidak perlu setup tambahan.
+Font Outfit dan Material Symbols Rounded otomatis di-load dari bundle. Tidak perlu setup tambahan.
 
 **Aturan versioning:**
 
@@ -117,12 +111,13 @@ Hasil build ada di `dist/`. Load `dist/srui.css` (unminified) untuk debugging.
 | `.srui-icon-sm` / `-md` / `-lg` | Icon sizing utilities |
 | `.srui-icon-touch` | 44×44px minimum touch target |
 | `.sr-only` | Screen-reader-only content |
+| `.material-symbols-rounded` | Icon rendering (ligatures) |
 
 ---
 
 ### 🎯 Iconography
 
-- **UI Icons:** Material Symbols Rounded (required)
+- **UI Icons:** Material Symbols Rounded (Self-hosted via SRUI CDN)
 - **Brand Logos:** Font Awesome Brands ONLY (`brands.min.css`)
 - **Sizes:** 16px (inline), 20px (buttons), 24px (decorative)
 - **Touch target:** Minimum 44×44px
@@ -188,7 +183,7 @@ Pastikan bobot 400, 500, 700 tersedia dan `font-display: swap` digunakan.
 
 - ❌ Light theme or light color variables
 - ❌ Full Font Awesome library (use `brands.min.css` only)
-- ❌ Changing `--srui-background`, `--srui-text`, `--srui-card` to light colors
+- ❌ Changing `--srui-background`, `--srui-text`, or `--srui-card` to light colors
 - ❌ Removing shadow or using radius less than `--srui-radius-sm` on interactive elements
 - ❌ Moving shadow on press effects
 

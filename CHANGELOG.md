@@ -13,6 +13,19 @@ _Nothing yet._
 
 ---
 
+## [3.1.0] - 2026-11-19
+
+### Added
+- **Self-hosted Material Symbols Rounded** — File `MaterialSymbolsRounded.woff2` ditambahkan ke folder `fonts/`.
+- **Icon Utility Class** — Menambahkan kelas `.material-symbols-rounded` di `srui-utilities.css` untuk mendukung ligatur ikon via variable font.
+- **`@font-face` Rule** — Menambahkan deklarasi font untuk Material Symbols di `srui-base.css` yang mengarah ke CDN sendiri.
+
+### Changed
+- **Bundle Distribution** — Bundle `srui.min.css` kini sepenuhnya mandiri (tidak lagi memerlukan link eksternal dari Google Fonts untuk ikon).
+- **Dokumentasi** — Memperbarui `README.md` dan `GUIDELINES.md` untuk menghapus referensi Google Fonts dan mengarahkan pengguna ke bundle SRUI.
+
+---
+
 ## [3.0.0] - 2026-09-19
 
 Rilis pertama di bawah **Business Source License 1.1**. Sekaligus migrasi dari distribusi file modular ke bundle CDN.
@@ -41,12 +54,8 @@ Rilis pertama di bawah **Business Source License 1.1**. Sekaligus migrasi dari d
 - Referensi ACLEPs di seluruh dokumen.
 - Full-library Font Awesome (hanya `brands.min.css`).
 
-### Notes
-
-- **Additional Use Grant:** production & commercial use permitted, provided you do not offer the Licensed Work (or a derivative) as a hosted or embedded design system / UI kit / component library to third parties.
-- **Change Date:** Ten years from the date the Licensed Work is published.
-
 ---
 
-[Unreleased]: https://github.com/Allwaysever/SuperRoundedUI/compare/v3.0.0...HEAD
+[Unreleased]: https://github.com/Allwaysever/SuperRoundedUI/compare/v3.1.0...HEAD
+[3.1.0]: https://github.com/Allwaysever/SuperRoundedUI/compare/v3.0.0...v3.1.0
 [3.0.0]: https://github.com/Allwaysever/SuperRoundedUI/releases/tag/v3.0.0

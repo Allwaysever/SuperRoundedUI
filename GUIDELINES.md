@@ -1,6 +1,6 @@
 # SuperRoundedUI (SRUI) Design Guidelines
 
-**Versi 3.0 – Iconography Update**  
+**Versi 3.1 – Self-Hosted Iconography**  
 **Oleh:** Tim Kreatif Allwaysever  
 **© 2025-2026 Allwaysever Project: SRUI**
 
@@ -155,30 +155,27 @@ Semua nilai SRUI disimpan sebagai *custom properties* di `:root`. Ini memungkink
 
 ---
 
-## 4. Tipografi: Outfit + Fallback
+## 4. Tipografi: Outfit + Material Symbols Rounded
 
-Font utama **Outfit** memberikan karakter geometris yang bersih, modern, dan ramah. File font di-host mandiri via jsDelivr, dan **otomatis di-load** oleh bundle SRUI.
+Font utama **Outfit** memberikan karakter geometris yang bersih, modern, dan ramah. Font ikon **Material Symbols Rounded** memberikan estetika yang selaras. Keduanya **di-host mandiri via jsDelivr** dan otomatis di-load oleh bundle SRUI.
 
 `@font-face` di bawah ini **auto-generated** saat build. Placeholder `__CDN_BASE__` di `src/srui-base.css` akan diganti dengan URL CDN sesuai versi di `package.json`. Jangan hardcode manual di source.
 
 ```css
 @font-face {
   font-family: 'Outfit';
-  src: url('https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.0.0/fonts/Outfit-Regular.ttf') format('truetype');
+  src: url('__CDN_BASE__/fonts/Outfit-Regular.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
 }
+/* ... (Medium & Bold) ... */
+
 @font-face {
-  font-family: 'Outfit';
-  src: url('https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.0.0/fonts/Outfit-Medium.ttf') format('truetype');
-  font-weight: 500;
+  font-family: 'Material Symbols Rounded';
+  font-style: normal;
+  font-weight: 400;
   font-display: swap;
-}
-@font-face {
-  font-family: 'Outfit';
-  src: url('https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.0.0/fonts/Outfit-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-display: swap;
+  src: url('__CDN_BASE__/fonts/MaterialSymbolsRounded.woff2') format('woff2');
 }
 ```
 
@@ -352,9 +349,9 @@ Untuk indikator loading gunakan kelas terpisah yang memutar ikon – tetap murni
 
 ---
 
-## 8. Ikonografi: Material Symbols Rounded + Font Awesome Brands
+## 8. Ikonografi: Self-Hosted Material Symbols + Font Awesome Brands
 
-SRUI secara resmi mengadopsi Material Symbols dari Google sebagai ikon sistem utama, dengan varian Rounded (opsz, wght, FILL, GRAD) untuk selaras dengan estetika sudut membulat. Ikon sistem wajib menggunakan Material Symbols.
+SRUI secara resmi mengadopsi Material Symbols dari Google sebagai ikon sistem utama, dengan varian Rounded (opsz, wght, FILL, GRAD) untuk selaras dengan estetika sudut membulat. **File font WOFF2 kini di-host mandiri di repositori SRUI** untuk performa, privasi, dan konsistensi versi.
 
 Untuk logo merek (brand) seperti GitHub, Twitter/X, atau Instagram, gunakan Font Awesome Brands terpisah. Hindari memuat full Font Awesome. Ikon akan mewarisi warna teks induk.
 
@@ -370,17 +367,15 @@ Ikon dekoratif harus diberi `aria-hidden="true"`. Ikon yang berdiri sendiri haru
 **Kode URL CDN yang digunakan:**
 
 ```html
-<!-- Ikon UI: Material Symbols Rounded (wajib) -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
-
-<!-- Logo Brand: Font Awesome Brands ONLY (ringan, ~200KB) -->
+<!-- Logo Brand: Font Awesome Brands ONLY (~200KB) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/brands.min.css" />
 ```
+*(Catatan: Tidak perlu lagi memuat link Google Fonts untuk Material Symbols, karena sudah otomatis ter-bundle di dalam `srui.min.css`)*.
 
 **Contoh implementasi kode:**
 
 ```html
-<!-- Ikon UI -->
+<!-- Ikon UI (Material Symbols) -->
 <button class="srui-pressed srui-chip srui-chip--accent">
   <span class="material-symbols-rounded srui-icon-md" aria-hidden="true">arrow_forward</span>
   Lanjutkan
@@ -455,16 +450,10 @@ Pastikan bobot 400, 500, 700 tersedia dan `font-display: swap` digunakan.
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SRUI Demo</title>
 
-  <!-- SRUI Bundle via CDN (production: pin versi exact) -->
+  <!-- SRUI Bundle via CDN (Sudah termasuk Outfit & Material Symbols) -->
   <link
     rel="stylesheet"
-    href="https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.0.0/dist/srui.min.css"
-  />
-
-  <!-- Ikon UI: Material Symbols Rounded -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.1.0/dist/srui.min.css"
   />
 
   <!-- Logo Brand: Font Awesome Brands ONLY -->
@@ -513,7 +502,7 @@ SRUI di-distribute sebagai bundle CSS via **jsDelivr** dari GitHub tag.
 
 ```
 SuperRoundedUI/
-├── fonts/              → Outfit TTF (via jsDelivr)
+├── fonts/              → Outfit (TTF) & Material Symbols (WOFF2) via jsDelivr
 ├── src/                → Source modular (maintenance)
 │   ├── srui-base.css
 │   ├── srui-variables.css
@@ -534,7 +523,7 @@ SuperRoundedUI/
 1. Naikkan `version` di `package.json` (semver).
 2. Update `CHANGELOG.md`.
 3. Jalankan `npm run build`.
-4. Commit `src/`, `dist/`, `CHANGELOG.md`, `package.json`.
+4. Commit `src/`, `dist/`, `CHANGELOG.md`, `package.json`, dan aset `fonts/` baru (jika ada).
 5. Tag `vX.Y.Z`.
 6. Push tag.
 7. Verifikasi URL jsDelivr: `https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@X.Y.Z/dist/srui.min.css`.
