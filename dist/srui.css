@@ -1,5 +1,5 @@
 /*!
- * SuperRoundedUI (SRUI) v3.1.0
+ * SuperRoundedUI (SRUI) v3.1.1
  * (c) 2025-2026 Allwaysever Projects
  * Licensed under Business Source License 1.1
  * https://github.com/Allwaysever/SuperRoundedUI/blob/main/LICENSE
@@ -14,7 +14,7 @@
 /* ===== Font Faces (Outfit via CDN) ===== */
 @font-face {
   font-family: 'Outfit';
-  src: url('https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.1.0/fonts/Outfit-Regular.ttf') format('truetype');
+  src: url('https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.1.1/fonts/Outfit-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -22,7 +22,7 @@
 
 @font-face {
   font-family: 'Outfit';
-  src: url('https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.1.0/fonts/Outfit-Medium.ttf') format('truetype');
+  src: url('https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.1.1/fonts/Outfit-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -30,7 +30,7 @@
 
 @font-face {
   font-family: 'Outfit';
-  src: url('https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.1.0/fonts/Outfit-Bold.ttf') format('truetype');
+  src: url('https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.1.1/fonts/Outfit-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -42,7 +42,7 @@
   font-style: normal;
   font-weight: 400; /* Variable font, satu file untuk semua weight */
   font-display: swap;
-  src: url('https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.1.0/fonts/MaterialSymbolsRounded.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.1.1/fonts/MaterialSymbolsRounded.woff2') format('woff2');
 }
 
 /* ===== Box Model Reset ===== */

@@ -118,12 +118,14 @@ function validate() {
     }
   }
 
+  // Ganti bagian ini di dalam function validate()
   if (!fs.existsSync(FONTS_DIR)) {
     errors.push('Folder fonts/ tidak ada');
   } else {
-    const fontFiles = fs.readdirSync(FONTS_DIR).filter(f => f.endsWith('.ttf'));
+    // Ubah filter agar menerima .ttf dan .woff2
+    const fontFiles = fs.readdirSync(FONTS_DIR).filter(f => f.endsWith('.ttf') || f.endsWith('.woff2'));
     if (fontFiles.length === 0) {
-      errors.push('Folder fonts/ kosong (tidak ada .ttf)');
+      errors.push('Folder fonts/ kosong (tidak ada .ttf atau .woff2)');
     }
   }
 
@@ -199,11 +201,13 @@ async function build() {
   writeFileSafe(minifiedPath, minified);
   console.log(`✅ dist/srui.min.css    ${kb(minified)}`);
 
+// Dan ganti bagian bawah (Info rilis) biar keren:
   // 3. Info rilis
   console.log('');
   console.log(`🚀 Build v${VERSION} selesai.`);
   console.log(`   CDN : ${CDN_BASE}/dist/srui.min.css`);
-  console.log(`   Font: ${CDN_BASE}/fonts/Outfit-Regular.ttf`);
+  console.log(`   Font Text: ${CDN_BASE}/fonts/Outfit-Regular.ttf`);
+  console.log(`   Font Icon: ${CDN_BASE}/fonts/MaterialSymbolsRounded.woff2`);
 }
 
 build().catch(err => {

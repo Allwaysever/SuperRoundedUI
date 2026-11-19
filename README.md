@@ -26,7 +26,7 @@ SuperRoundedUI is a pure-CSS design system created by Allwaysever that combines 
 <!-- SRUI Bundle (Includes Outfit & Material Symbols Rounded) -->
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.1.0/dist/srui.min.css"
+  href="https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.1.1/dist/srui.min.css"
 />
 
 <!-- Brand Logos: Font Awesome Brands (optional) -->
@@ -36,7 +36,7 @@ SuperRoundedUI is a pure-CSS design system created by Allwaysever that combines 
 />
 ```
 
-> ⚠️ **Production:** Selalu pin ke versi exact (`@3.1.0`). Jangan pakai `@latest` di produksi.
+> ⚠️ **Production:** Selalu pin ke versi exact (`@3.1.1`). Jangan pakai `@latest` di produksi.
 
 #### Basic Usage
 
@@ -60,9 +60,9 @@ SRUI di-distribute sebagai **single bundle** via jsDelivr.
 
 | Environment | URL |
 | --- | --- |
-| **Production** (pinned) | `https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.1.0/dist/srui.min.css` |
+| **Production** (pinned) | `https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.1.1/dist/srui.min.css` |
 | **Development** (latest) | `https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@latest/dist/srui.min.css` |
-| **Debug** (unminified) | `https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.1.0/dist/srui.css` |
+| **Debug** (unminified) | `https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.1.1/dist/srui.css` |
 
 Font Outfit dan Material Symbols Rounded otomatis di-load dari bundle. Tidak perlu setup tambahan.
 

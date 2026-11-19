@@ -13,7 +13,7 @@ _Nothing yet._
 
 ---
 
-## [3.1.0] - 2026-11-19
+## [3.1.0 & 3.1.1] - 2026-11-19
 
 ### Added
 - **Self-hosted Material Symbols Rounded** — File `MaterialSymbolsRounded.woff2` ditambahkan ke folder `fonts/`.

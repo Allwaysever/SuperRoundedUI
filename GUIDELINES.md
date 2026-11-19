@@ -453,7 +453,7 @@ Pastikan bobot 400, 500, 700 tersedia dan `font-display: swap` digunakan.
   <!-- SRUI Bundle via CDN (Sudah termasuk Outfit & Material Symbols) -->
   <link
     rel="stylesheet"
-    href="https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.1.0/dist/srui.min.css"
+    href="https://cdn.jsdelivr.net/gh/Allwaysever/SuperRoundedUI@3.1.1/dist/srui.min.css"
   />
 
   <!-- Logo Brand: Font Awesome Brands ONLY -->
